@@ -58,6 +58,8 @@ int main(int argc, char const* argv[])
 
         std::vector<sample_type> samples;
 
+        if (std::cin.get() == std::cin.fail() || std::cin.fail())
+            throw std::invalid_argument("Incorrect input");
 
         std::string line;
         while(std::getline(std::cin, line))
